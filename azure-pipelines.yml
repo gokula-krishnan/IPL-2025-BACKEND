@@ -1,0 +1,58 @@
+schedules:
+ - cron: "*/3 14-18 * * *" #"*/3 * * * *"#
+   displayName: Execute every 3 minutes from 19.30 to 23.30
+   branches:
+     include:
+     - master
+   always: "true"
+#  - cron: "0-15/3 18 * * *"
+#    displayName: Execute every 3 minutes from 23.30 to 0
+#    branches:
+#      include:
+#       - master
+#    always: true
+      
+pool:
+  vmImage: windows-latest
+
+steps:
+- script: pip3 install PyGithub
+- task: PythonScript@0
+  inputs:
+    scriptSource: 'inline'
+    script: |
+      import github
+      import json
+
+      gitHubToken = "$(token)" 
+      gh = github.Github(gitHubToken)
+      gist = gh.get_gist("ab8f8d3e486a04a0ecc35cfea0f325ae")
+      playerPoints = gist.files["ipl2022-player-points.json"].content
+      
+      with open("sample.json","w") as f:
+         json.dump(playerPoints, f)
+
+- task: PythonScript@0
+  inputs:
+    scriptSource: 'filePath'
+    scriptPath: 'dataScrapper.py'
+    arguments: '$(match_id)'
+
+- task: PythonScript@0
+  inputs:
+    scriptSource: 'inline'
+    script: |
+      import github
+      import json
+      
+      gitHubToken = "$(token)" 
+      gh = github.Github(gitHubToken)
+      gist = gh.get_gist("ab8f8d3e486a04a0ecc35cfea0f325ae")
+      
+      with open("sample.json","r") as f:
+         pointsData=json.load(f)
+      
+      gist.edit(description="Updating points", files={
+          "ipl2022-player-points.json": github.InputFileContent(content=json.dumps(pointsData))
+      })
+      

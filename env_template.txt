@@ -1,0 +1,8 @@
+# change below values according to each series
+
+TEAM_URL=https://hs-consumer-api.espncricinfo.com/v1/pages/series/squad/details
+TEAM_IDS=["1345088", "1345099", "1345118", "1345123", "1345126", "1345167", "1345168", "1346157", "1346159", "1346156"]
+SERIES_ID=1345038
+MATCH_URL=https://hs-consumer-api.espncricinfo.com/v1/pages/match/scorecard
+MATCH_START_ID=1359475
+MATCH_END_ID=1370353
