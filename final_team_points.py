@@ -27,14 +27,6 @@ for team in teamListData:
     # store to the results blob
     results[team] = sum(pointSum)
 
-    # #MVP Orange and purple cap points
-    # if team == "VBR":
-    #     results[team] += 200
-    #
-    # if team == "AAK":
-    #     results[team] += 100
-
-
 # sort by points
 sortList = sorted(results.items(), key=lambda x: x[1],reverse=True)
 for team in sortList:
