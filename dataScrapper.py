@@ -70,8 +70,9 @@ for i in range(int(matchStartId), int(matchEndId)+1):
     print(i)
     currentMatchId = i
     requestURL = match_url+"?lang=en&seriesId="+series_id+"&matchId={0}".format(str(currentMatchId))
-
-    matchResponseData = requests.get(url=requestURL)
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.93 Safari/537.36'}
+    matchResponseData = requests.get(url=requestURL, headers=headers)
     matchData = matchResponseData.json()
     teams = matchData["match"]["teams"]
 

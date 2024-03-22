@@ -14,7 +14,9 @@ requestURL = team_url+"?seriesId="+series_id+"&squadId={0}"
 teamIds = loads(os.getenv("TEAM_IDS"))
 
 for id in teamIds:
-    teamInfo = requests.get(url=requestURL.format(id)).json()
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.93 Safari/537.36'}
+    teamInfo = requests.get(url=requestURL.format(id), headers=headers).json()
     print("Writing team details")
     with open('Data/teams.csv', 'a', newline='\n') as teamFile:
         writer = csv.writer(teamFile)
