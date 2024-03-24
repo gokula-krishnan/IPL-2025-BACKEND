@@ -26,8 +26,8 @@ steps:
 
       gitHubToken = "$(token)" 
       gh = github.Github(gitHubToken)
-      gist = gh.get_gist("ab8f8d3e486a04a0ecc35cfea0f325ae")
-      playerPoints = gist.files["ipl2022-player-points.json"].content
+      gist = gh.get_gist("470ed48ea52e4efa8c0609e2f3fdf560")
+      playerPoints = gist.files["ipl2024-player-points.json"].content
       
       with open("sample.json","w") as f:
          json.dump(playerPoints, f)
@@ -47,12 +47,12 @@ steps:
       
       gitHubToken = "$(token)" 
       gh = github.Github(gitHubToken)
-      gist = gh.get_gist("ab8f8d3e486a04a0ecc35cfea0f325ae")
+      gist = gh.get_gist("470ed48ea52e4efa8c0609e2f3fdf560")
       
       with open("sample.json","r") as f:
          pointsData=json.load(f)
       
       gist.edit(description="Updating points", files={
-          "ipl2022-player-points.json": github.InputFileContent(content=json.dumps(pointsData))
+          "ipl2024-player-points.json": github.InputFileContent(content=json.dumps(pointsData))
       })
       
