@@ -1236,7 +1236,7 @@
           "bowlingPoints": 0,
           "fieldingPoints": 0,
           "points": 118,
-          "isMOTM": false
+          "isMOTM": true
         }
       ]
     },
