@@ -6,3 +6,10 @@ SERIES_ID=1345038
 MATCH_URL=https://hs-consumer-api.espncricinfo.com/v1/pages/match/scorecard
 MATCH_START_ID=1359475
 MATCH_END_ID=1370353
+
+#token of your github account which has the gist
+access_token=
+# id of the gist where the file reside
+gist_id=
+# file name to update inside the gist
+gist_file_name=
