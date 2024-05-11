@@ -3745,7 +3745,7 @@
       "id": 104818,
       "name": "Sameer Rizvi",
       "teamId": 4343,
-      "totalPoints": 50,
+      "totalPoints": 95,
       "scores": [
         {
           "matchId": 1422119,
@@ -3879,8 +3879,7 @@
         {
           "matchId": 1426284,
           "opponentTeamId": 5143,
-          "battingPerformance": {
-          },
+          "battingPerformance": {},
           "bowlingPerformance": {},
           "fieldingPerformance": {
             "catches": 1,
@@ -3895,8 +3894,7 @@
         {
           "matchId": 1426291,
           "opponentTeamId": 4342,
-          "battingPerformance": {
-          },
+          "battingPerformance": {},
           "bowlingPerformance": {},
           "fieldingPerformance": {
             "catches": 2,
@@ -19055,7 +19053,7 @@
       "id": 100878,
       "name": "Devdutt Padikkal",
       "teamId": 6903,
-      "totalPoints": 75,
+      "totalPoints": 90,
       "scores": [
         {
           "matchId": 1422122,
@@ -19171,8 +19169,7 @@
         {
           "matchId": 1426292,
           "opponentTeamId": 4341,
-          "battingPerformance": {
-          },
+          "battingPerformance": {},
           "bowlingPerformance": {},
           "fieldingPerformance": {
             "catches": 1,
@@ -19439,7 +19436,7 @@
       "id": 64479,
       "name": "Deepak Hooda",
       "teamId": 6903,
-      "totalPoints": 287,
+      "totalPoints": 302,
       "scores": [
         {
           "matchId": 1422122,
@@ -19620,8 +19617,7 @@
         {
           "matchId": 1422139,
           "opponentTeamId": 6904,
-          "battingPerformance": {
-          },
+          "battingPerformance": {},
           "bowlingPerformance": {},
           "fieldingPerformance": {
             "catches": 1,
@@ -22526,7 +22522,7 @@
       "id": 63509,
       "name": "Vijay Shankar",
       "teamId": 6904,
-      "totalPoints": 169,
+      "totalPoints": 184,
       "scores": [
         {
           "matchId": 1422123,
@@ -22666,8 +22662,7 @@
         {
           "matchId": 1426283,
           "opponentTeamId": 4340,
-          "battingPerformance": {
-          },
+          "battingPerformance": {},
           "bowlingPerformance": {},
           "fieldingPerformance": {
             "catches": 1,
@@ -32047,7 +32042,7 @@
       "id": 104260,
       "name": "Jake Fraser-McGurk",
       "teamId": 4344,
-      "totalPoints": 745,
+      "totalPoints": 775,
       "scores": [
         {
           "matchId": 1426264,
@@ -32184,8 +32179,7 @@
         {
           "matchId": 1422138,
           "opponentTeamId": 4346,
-          "battingPerformance": {
-          },
+          "battingPerformance": {},
           "bowlingPerformance": {},
           "fieldingPerformance": {
             "catches": 2,
@@ -32258,7 +32252,7 @@
       "id": 80425,
       "name": "Rovman Powell",
       "teamId": 4345,
-      "totalPoints": 205,
+      "totalPoints": 220,
       "scores": [
         {
           "matchId": 1426265,
@@ -32374,7 +32368,7 @@
           "points": 21,
           "isMOTM": false
         },
-         {
+        {
           "matchId": 1422132,
           "opponentTeamId": 4346,
           "battingPerformance": {},
@@ -33625,7 +33619,7 @@
       "id": 51454,
       "name": "Manish Pandey",
       "teamId": 4341,
-      "totalPoints": 103,
+      "totalPoints": 133,
       "scores": [
         {
           "matchId": 1426289,
@@ -33651,8 +33645,7 @@
         {
           "matchId": 1422134,
           "opponentTeamId": 4344,
-          "battingPerformance": {
-          },
+          "battingPerformance": {},
           "bowlingPerformance": {},
           "fieldingPerformance": {
             "catches": 2,
@@ -34040,7 +34033,7 @@
       "id": 60737,
       "name": "Krishnappa Gowtham",
       "teamId": 6903,
-      "totalPoints": 0,
+      "totalPoints": 15,
       "scores": [
         {
           "matchId": 1426295,
@@ -34071,8 +34064,7 @@
         {
           "matchId": 1426292,
           "opponentTeamId": 4341,
-          "battingPerformance": {
-          },
+          "battingPerformance": {},
           "bowlingPerformance": {},
           "fieldingPerformance": {
             "catches": 1,
