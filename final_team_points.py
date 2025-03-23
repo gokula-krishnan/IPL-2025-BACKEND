@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # open auction team list file
-teamListFile = open('IPL_2023_TEAMS/teamList.json')
+teamListFile = open('IPL_2025_TEAMS/teamList.json')
 teamListData = json.load(teamListFile)
 
 #  initialise results

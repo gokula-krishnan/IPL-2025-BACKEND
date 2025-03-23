@@ -65,16 +65,35 @@ def get_motm_award(player_id, match_player_awards):
             is_motm = True
     return is_motm
 
+all_match_data = []
+folder_path = "IPL2025_MATCH_DATA"
+
+# Loop through each file in the folder
+for filename in os.listdir(folder_path):
+    if filename.endswith(".json"):  # Check if the file is a JSON file
+        file_path = os.path.join(folder_path, filename)
+        with open(file_path, "r", encoding="utf-8") as json_file:
+            try:
+                data = json.load(json_file)
+                all_match_data.append(data)
+            except json.JSONDecodeError as e:
+                print(f"Error reading {filename}: {e}")
 
 for i in range(int(matchStartId), int(matchEndId)+1):
     print(i)
     currentMatchId = i
-    requestURL = match_url+"?lang=en&seriesId="+series_id+"&matchId={0}".format(str(currentMatchId))
-    headers = {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.93 Safari/537.36'}
-    matchResponseData = requests.get(url=requestURL, headers=headers)
-    matchData = matchResponseData.json()
+    matchData = all_match_data[i-int(matchStartId)]
     teams = matchData["match"]["teams"]
+
+# for i in range(int(matchStartId), int(matchEndId)+1):
+#     print(i)
+#     currentMatchId = i
+#     requestURL = match_url+"?lang=en&seriesId="+series_id+"&matchId={0}".format(str(currentMatchId))
+#     headers = {
+#         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.93 Safari/537.36'}
+#     matchResponseData = requests.get(url=requestURL, headers=headers)
+#     matchData = matchResponseData.json()
+#     teams = matchData["match"]["teams"]
 
     teamIdCount = teams[0]["team"]["id"] + teams[1]["team"]["id"]
 
